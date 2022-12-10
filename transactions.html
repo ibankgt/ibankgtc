@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- All CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/css/daterangepicker.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/tagify.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <title>Dashboard | Instant Wallet</title>
+</head>
+
+<body class="theme-dark" id="body">
+    <div id="main-wrapper">
+
+        <!-- Header strat -->
+        <header class="header sticky-header" style="background-color: #fff;">
+            <div class="container-fluid">
+
+                <div class="d-flex align-items-center">
+                    <a href="dashboard.html" class="logo">
+                        <!-- <img src="assets/images/logomain.png" alt="Instant Wallet" /> -->
+                        <h3 class="text-dark mt-2">Hellenic Bank Wallet</h3>
+                    </a>
+                    <button class="menu-toggler arrow">
+                        <i class="fas fa-chevron-right text-dark"></i>
+                    </button>
+                    <!-- <a href="#" class="menu-toggler">
+              <i class="ti-menu"></i>
+            </a> -->
+                    <!-- <div class="header-search d-none d-md-block">
+              <form action="#" class="search-form">
+                <input type="search" name="search" placeholder="Search here">
+                <button><i class="ti-search"></i></button>
+              </form>
+            </div> -->
+
+                    <ul class="navbar-nav utility-nav ml-auto">
+                        <li class="nav-item expand-screen">
+                            <a href="javascript:void(0);">
+                                <i class="fas fa-expand text-black"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item nav-profile">
+
+                            <a class="user-profile" href="#" role="button" id="profiletab" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <!-- <figure class="avatar-circle-sm">
+                    <img src="assets/images/avatar.jpg" alt="">
+                    <span class="presence-indicator online"></span>
+                  </figure> -->
+                                <figure class="avatar-default" style="background-color: #fb7636; color: #000">
+                                    <!-- <span>bc</span>
+                    <span class="presence-indicator online"></span> -->
+                                    <img src="./assets/images/avatars/instantpic.jpeg" alt="">
+                                </figure>
+                                <strong class="user-name text-dark">Marsyl Mponguili</strong>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html" class="text-white">
+                                Log out &nbsp;<i class="fas fa-sign-out-alt text-dark"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+        <!-- Header strat -->
+
+        <main">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card" style="height: 100vh;">
+                        <div class="d-md-flex align-items-center mb-4">
+                            <div class="card-header flex-grow-1">
+                                <h4 class="card-title">Recent Transactions</h4>
+                            </div>
+                        </div>
+                        <!-- <h4>No Transactions Have Been Recorded</h4> -->
+                        <div class="card-body table-responsive">
+                            <table class="table th-sticky">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Transaction Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>10-12-2021 <br /> 04:23:02</td>
+                                        <td>$3000</td>
+                                        <td class="t-status pending">Dr - maill-outGates </td>
+                                        <td class="text-danger">Debit</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>09-12-2021 <br /> 04:10:20</td>
+                                        <td>$3000</td>
+                                        <td class="t-status pending">Dr - ATM WD HOUSING FINANCE CORPORATION CHIOUS COMPLEX</td>
+                                        <td class="text-danger">Debit</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>08-12-2021 <br /> 06:11:52</td>
+                                        <td>$200</td>
+                                        <td class="t-status pending">Dr - ACCOUNT WAVE CHARGES</td>
+                                        <td class="text-danger">Debit</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>08-12-2021 <br /> 04:20:32</td>
+                                        <td>$3000</td>
+                                        <td class="t-status pending">Dr - ATM WD 181-191 LARNAKA ANCORIA BANK</td>
+                                        <td class="text-danger">Debit</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>02-12-2021 <br /> 10:32:20</td>
+                                        <td>$200,000.00</td>
+                                        <td class="t-status pending">Cr-522*****6399 HAUHAN KIDO STAALWERKE BI</td>
+                                        <td class="text-success">Credit</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>02-12-2021 <br /> 10:32:20</td>
+                                        <td>$500.25</td>
+                                        <td class="t-status pending">Deposit</td>
+                                        <td class="text-success">Credit</td>
+                                    </tr>
+                                    
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer strat -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>&copy; 1999 - 2021 Wells Fargo. All Rights Reserved. NMLSR ID 399801</p>
+                    </div>
+                    <div class="col-md-4 text-md-right">
+                        <!-- <p>Developed with <i class="ti-heart"></i> by <a href="https://wwwinstagram.com/ari.n.ze">Arinze</a></p>
+            </div> -->
+                    </div>
+                </div>
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Modal Box -->
+        <div class="modal">
+            <div class="modal-inner">
+                <div class="modal-thumbnail">
+                    <img src="assets/images/products/b1.jpg" alt="">
+                </div>
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal product fade" id="popupModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <span class="close" data-dismiss="modal" aria-label="Close">&times;</span>
+
+                    <div class="modal-thumbnail">
+                        <img src="assets/images/products/b1.jpg" alt="">
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="heading">
+                            Dany Exclusive Products
+                            <span>Man grass deep cattle</span>
+                        </div>
+                        <div class="invoice-widget">
+                            <ul>
+                                <li><strong>View: </strong>2,350</li>
+                                <li><strong>Last sale: </strong>today</li>
+                                <li><strong>Total sale: </strong>15</li>
+                                <li><strong>Ratings: </strong>90%</li>
+                                <li><strong>Comments: </strong>2k</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Box end -->
+
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/ckeditor.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/daterangepicker.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/tagify.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/chart-options.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

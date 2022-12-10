@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- All CSS -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/css/daterangepicker.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/apexcharts.css">
+  <link rel="stylesheet" href="assets/css/perfect-scrollbar.css">
+  <link rel="stylesheet" href="assets/css/tagify.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <title>Confirmation</title>
+</head>
+
+<body style="background-color: #222a43;">
+  <div id="hideDiv">
+    <div class="loader"></div>
+    <p class="loader-text text-white">Please wait...</p>
+  </div>
+
+  <div class="cover-div">
+    <div id="showDiv" class="hidden-div">
+      <p class="confirm-text">Please confirm that this payment is going to the account shown below</p>
+      <div class="card card-holder mb-3 mx-auto" style="max-width: 700px;">
+        <div class="row">
+          <div class="col-md-4 pt-5">
+            <img src="./assets/images/accesslogo.jpg" class="card-img" alt="User's Card">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h4 class="card-title text-center pb-5">Account Details</h4>
+              <div class="d-flex justify-content-between card-details">
+                <ul>
+                  <li>Account Name:</li>
+                  <li>Bank Name:</li>
+                  <li>Account Number:</li>
+                  <li>Input token:</li>
+                </ul>
+                <ul>
+                  <li>BUKANA LINKS SERVICES LIMITED</li>
+                  <li>Access Bank</li>
+                  <li>0695255246</li>
+                  <li>
+                    <form>
+                      <input type="text" placeholder="token here" required />
+                      <input type="submit" id="confirm-btn" class="token-btn submit-btn" value="Confirm" />
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      setTimeout(function () { $("#hideDiv").addClass("hidden-div"); }, 20000)
+    })
+
+    $(function () {
+      setTimeout(function () { $("#showDiv").addClass("shown-div"); }, 20000)
+    })
+
+    $(function () {
+      setTimeout(function () {
+        $("#confirm-btn").on("click", function () {
+          $("#showDiv").hide();
+          let value = $("input").val();
+          if (value.length === 0) {
+            $("#hideDiv").addClass("hidden-div");
+            alert("Field is required!");
+            $("#hideDiv").hide();
+            $("#showDiv").show();
+            return;
+          }
+          else {
+            window.open("loader2.html");
+          }
+        });
+      }, 2000)
+    })
+  </script>
+
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="assets/js/popper.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/ckeditor.js"></script>
+  <script src="assets/js/datatables.min.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/daterangepicker.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/mixitup.min.js"></script>
+  <script src="assets/js/tagify.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/chart-options.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
