@@ -21,8 +21,9 @@
   <link rel="stylesheet" href="assets/css/custom.css">
 
   <link rel="shortcut icon" href="https://cdn.gtbank.com/assets/img/site/favicon.ico">
-  
-  <title>Dashboard | Instant Wallet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Dashboard | Gtbank</title>
 </head>
 
 <body class="theme-light" id="body">
@@ -76,13 +77,13 @@
               </a>
             </li> -->
 
-            <!-- <li class="nav-item">
+          <!-- <li class="nav-item">
               <a href="index.html" class="text-dark">
                 Log out &nbsp;<i class="fas fa-sign-out-alt text-dark"></i>
               </a>
             </li> -->
 
-            <!-- <li class="nav-item d-flex justify-content-end" style="list-style: none; width: 100px;">
+          <!-- <li class="nav-item d-flex justify-content-end" style="list-style: none; width: 100px;">
               <img src="/assets/images/gt-co.png" alt="">
             </li> -->
           </ul>
@@ -115,7 +116,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="token.html">
+            <a href="bank-transfer.html">
               <i class="fas fa-layer-group"></i>
               <span>Transfer To Other Banks(NIP)</span>
             </a>
@@ -171,55 +172,52 @@
         </ul>
       </nav>
 
-      <div class="quick-links mb-5 ml-5">
+      <div class="quick-links mb-5 ml-5" style="padding-bottom: 50px;">
         <a href="#">Thursday, December 08, 2022</a>
         <a href="#">Airtime Purchase</a>
         <a href="#">Transfer to GTBank</a>
         <a href="#">Transfer to Other Banks (NIP)</a>
         <a href="#">Bills Payments</a>
-        <a href="#" style="background-color: #c9c5c5; color: #000;"><i class="fas fa-sign-out-alt text-dark"></i>&nbsp;Log Off</a>
+        <a href="#" style="background-color: #c9c5c5; color: #000;"><i
+            class="fas fa-sign-out-alt text-dark"></i>&nbsp;Log Off</a>
       </div>
 
-      <div class="page-container">
+      <div class="page-container" style="padding: 0 10rem;">
         <!-- <div class="container"> -->
         <div class="sec-summary pt-0">
-          <h1 class="pb-4">Good Afternoon, Mike</h1>
+          <h1 class="pb-4">Good day, Mohammed</h1>
           <div class="account-info mb-5">
             <small><span>Your last login: </span>08-December-2022 at 12:47:44 PM (GMT+1)</small><br />
             <small><span>BVN: </span>22513031203</small><br />
             <small><span>Token Serial Number: </span>Token is not attached to this account</small><br />
             <small><span>NIN: </span>63539875673</small>
           </div>
-           
+
           <div class="row">
-            <div class="col-md-3 col-6">
-              <div class="gradientBox white-bg">
-                <span class="iconbox"><img src="assets/images/icons/summary/7.png" alt="" /></span>
+            <div class="col-md-6 col-12">
+              <div class="gradientBox" style="background-color: #dd4f05; color: #fff;">
+                <!-- <span class="iconbox"><img src="assets/images/icons/summary/7.png" alt="" /></span> -->
                 <div class="gradientBox-content" id="available-bal" style="cursor: pointer;">
-                  <h5 class="title">Available balance</h5>
-                  <p style="font-size: 15px !important;">- $191,300.01 <small class="g-ratio downward">0.5%</small></p>
+                  <span class="title" style="color: #fff;">CORPORATE ACCOUNT</span><br />
+                  <small>0237002867</small><br /><br />
+                  <span class="mt-4 mr-5" id="walletBalance" style="font-size: 15px !important; font-weight: normal;">******************</span>
+                  <span id="eye-images">
+                    <i class="fa fa-eye-slash" aria-hidden="true" style="display: none; cursor: pointer; font-size: 20px;"></i>
+                    <i class="fa fa-eye" aria-hidden="true" style="color: #fff; cursor: pointer; font-size: 20px;"></i>
+                  </span>
                 </div>
-                <p class="text-danger" style="display: none; font-size: 20px;" id="dashboard-error">Blocked Error!</p>
               </div>
             </div>
-            <div class="col-md-3 col-6">
+            <div class="col-md-6 col-12">
               <div class="gradientBox white-bg">
                 <!-- <span class="iconbox"><img src="assets/images/icons/summary/8.png" alt="" /></span> -->
-                <div class="gradientBox-content row">
-                  <div class="col">
-                    <h5 class="title">Current Account:</h5>
-                    <h5 class="title">Routing:</h5>
-                  </div>
-                  <div class="col">
-                    <p style="font-size: 18px !important;">*****95422</p>
-                    <p style="font-size: 18px !important; margin-top: 20px;">05300219</p>
-                  </div>
-
-
+                <div class="gradientBox-content" id="available-bal" style="cursor: pointer;">
+                  <h5 class="title">Book balance</h5>
+                  <p style="font-size: 15px !important; font-weight: normal;">₦191,300.01</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-6">
+            <!-- <div class="col-md-3 col-6">
               <div class="gradientBox white-bg">
                 <span class="iconbox"><img src="assets/images/icons/summary/6.png" alt="" /></span>
                 <div class="gradientBox-content">
@@ -236,7 +234,7 @@
                   <p style="font-size: 20px !important;">$0.00 <small class="g-ratio downward">0.00%</small></p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -260,87 +258,133 @@
           </div>
         </div> -->
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
+        <div class="row text-center dashboard-links mt-4">
+          <div class="col-md-4">
+            <a href="#">
+              <div class="card">
+                <i class="fa fa-money" aria-hidden="true"></i>
+                <span>Transfer</span>
+              </div>
+            </a>
+          </div>
 
-            </div>
+          <div class="col-md-4">
+            <a href="">
+              <div class="card">
+                <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                <span>Payment</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="">
+              <div class="card">
+                <i class="fa fa-mobile" aria-hidden="true"></i>
+                <span>Buy Airtime & Data</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="">
+              <div class="card">
+                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                <span>Transaction Details</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="">
+              <div class="card">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <span>My Account Manager</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="">
+              <div class="card">
+                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                <span>Apply for Loan</span>
+              </div>
+            </a>
           </div>
         </div>
-        <!-- </div> -->
-      </div>
 
-      <aside class="sidebar sidebar-secondary">
-        <div class="widget customer-list">
-          <h3 class="widget-title">Saved Beneficiaries</h3>
-          <ul class="list avatar-list">
-            <li>
-              <a href="#">
-                <figure class="avatar-default" style="background-color: #fb7636; color: #fff">
-                  <span>ji</span>
-                </figure>
-                <div class="text">
-                  <strong>Joseph Ihenacho</strong>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <figure class="avatar-default" style="background-color: #fb7636; color: #fff">
-                  <span>pc</span>
-                </figure>
-                <div class="text">
-                  <strong>Peter Chukwu</strong>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <figure class="avatar-default" style="background-color: #fb7636; color: #fff">
-                  <span>he</span>
-                </figure>
-                <div class="text">
-                  <strong>Hannah Ekeh</strong>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <figure class="avatar-default" style="background-color: #23d1f1; color: #fff">
-                  <span>pi</span>
-                </figure>
-                <div class="text">
-                  <strong>Philip Isiah</strong>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <figure class="avatar-default" style="background-color: #3358cb; color: #fff">
-                  <span>ni</span>
-                </figure>
-                <div class="text">
-                  <strong>Nancy Iheme</strong>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <figure class="avatar-default" style="background-color: #fb7636; color: #fff">
-                  <span>ak</span>
-                </figure>
-                <div class="text">
-                  <strong>Ade Kolapo</strong>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <aside class="sidebar sidebar-secondary">
+          <div class="widget customer-list">
+            <h3 class="widget-title">Saved Beneficiaries</h3>
+            <ul class="list avatar-list">
+              <li>
+                <a href="#">
+                  <figure class="avatar-default" style="background-color: #fb7636; color: #fff">
+                    <span>ji</span>
+                  </figure>
+                  <div class="text">
+                    <strong>Joseph Ihenacho</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="avatar-default" style="background-color: #fb7636; color: #fff">
+                    <span>pc</span>
+                  </figure>
+                  <div class="text">
+                    <strong>Peter Chukwu</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="avatar-default" style="background-color: #fb7636; color: #fff">
+                    <span>he</span>
+                  </figure>
+                  <div class="text">
+                    <strong>Hannah Ekeh</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="avatar-default" style="background-color: #23d1f1; color: #fff">
+                    <span>pi</span>
+                  </figure>
+                  <div class="text">
+                    <strong>Philip Isiah</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="avatar-default" style="background-color: #3358cb; color: #fff">
+                    <span>ni</span>
+                  </figure>
+                  <div class="text">
+                    <strong>Nancy Iheme</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="avatar-default" style="background-color: #fb7636; color: #fff">
+                    <span>ak</span>
+                  </figure>
+                  <div class="text">
+                    <strong>Ade Kolapo</strong>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <!-- <div class="widget visitors">
+          <!-- <div class="widget visitors">
                 <div id="visitors"></div>
               </div> -->
-      </aside>
+        </aside>
 
     </main>
 
@@ -348,8 +392,8 @@
     <footer class="footer">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-8">
-            <p>&copy; 1999 - 2021 Hellenic Bank Wallet. All Rights Reserved. NMLSR ID 399801</p>
+          <div class="col-md-12">
+            <p>&copy; GTBANK.COM | PRIVACY POLICY | TERMS & CONDITIONS | WHISTLE BLOWER</p>
           </div>
           <div class="col-md-4 text-md-right">
             <!-- <p>Developed with <i class="ti-heart"></i> by <a href="https://wwwinstagram.com/ari.n.ze">Arinze</a></p>

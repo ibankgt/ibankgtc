@@ -279,10 +279,16 @@ section {
 */
 .card {
   border: none;
-  border-radius: 0;
+  border-radius: 10px;
   padding: 3rem;
   position: relative;
   margin-bottom: 30px;
+}
+
+.card i {
+  font-size: 40px;
+  color: #dd4f05;
+  margin-bottom: 10px;
 }
 
 .theme-light .card {
@@ -1644,7 +1650,11 @@ section {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   z-index: 2;
-  margin-top: 6rem;
+  margin-top: 11rem;
+}
+
+.dashboard-links a {
+  color: #333;
 }
 
 .theme-light .sidebar-main {
@@ -1665,7 +1675,7 @@ section {
 
 @media screen and (max-width: 1440px) {
   .sidebar-main {
-    width: 30.5rem;
+    width: 37.5rem;
   }
 }
 
@@ -1741,6 +1751,7 @@ section {
   color: #fff;
   background-color: #dd4f05;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 .sidebar-main .nav-item ul.sub-menu li:first-child {

@@ -312,6 +312,12 @@ $('#card-info-btn').click(function() {
     }, 10000);
 })
 
+$('#eye-images').click(function() {
+    let wallet_balance = '₦2,345,191,300.01';
+    $('#walletBalance').text($('#walletBalance').text() == wallet_balance ? '******************' : wallet_balance);
+    $('i', this).toggle();
+})
+
 // $('#available-bal').click(function() {
 //     $(this).hide();
 //     $('#dashboard-error').show();
