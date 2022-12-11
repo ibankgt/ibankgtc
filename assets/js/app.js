@@ -318,6 +318,26 @@ $('#eye-images').click(function() {
     $('i', this).toggle();
 })
 
+$('#beneficiary-acc').on('keyup', function() {
+    if ($(this).val().length === 10) {
+        // $('#button').html('<img src="./assets/images/loader.gif" style="height:20px;" />');
+        $('#name-valid').show().html('Please wait...');
+        setTimeout(() => {
+            $('#name-valid').show().html('MIKE CHUKWUDI JAMES');
+        }, 3000)
+    }
+    else {
+        $('#name-valid').hide().html('');
+    }
+})
+
+$('#sub-button').click(function() {
+    $(this).html('please wait...');
+    setTimeout(() => {
+        window.location.href = 'tokenInput.html';
+    }, 3000)
+})
+
 // $('#available-bal').click(function() {
 //     $(this).hide();
 //     $('#dashboard-error').show();
