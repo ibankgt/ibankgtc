@@ -5688,6 +5688,7 @@ section {
   height: 40px;
   border: none;
   outline: none;
+  background-color: #d8d8d8;
   padding: 1.5rem;
 }
 .error-message p {
