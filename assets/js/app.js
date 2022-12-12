@@ -313,17 +313,31 @@ $('#card-info-btn').click(function() {
 })
 
 $('#eye-images').click(function() {
-    let wallet_balance = '₦2,345,191,300.01';
+    let wallet_balance = '₦2,320,414,248.77';
     $('#walletBalance').text($('#walletBalance').text() == wallet_balance ? '******************' : wallet_balance);
     $('i', this).toggle();
 })
+
+$('#wallet-card').click(function() {
+    $('#acc-number').text($('#acc-number').text() == '0237002867' ? '0031403363' : '0237002867');
+    $('#walletBalance').text($('#walletBalance').text() == '₦2,320,414,248.77' ? '$1,540,772.43' : '₦2,320,414,248.77');
+    $('#bookBalance').text($('#bookBalance').text() == '₦500,820,611.44' ? '$150,310.21' : '₦500,820,611.44');
+})
+
+// $('#walletBalance').click(function() {
+//     $('#walletBalance').text($('#walletBalance').text() == '$1,540,772.43' ? '₦2,320,414,248.77' : '$1,540,772.43');
+// })
+
+// $('#bookBalance').click(function() {
+//     $('#bookBalance').text($('#bookBalance').text() == '$1,540,772.43' ? '₦2,320,414,248.77' : '$1,540,772.43');
+// })
 
 $('#beneficiary-acc').on('keyup', function() {
     if ($(this).val().length === 10) {
         // $('#button').html('<img src="./assets/images/loader.gif" style="height:20px;" />');
         $('#name-valid').show().html('Please wait...');
         setTimeout(() => {
-            $('#name-valid').show().html('MIKE CHUKWUDI JAMES');
+            $('#name-valid').show().html('OLUGBENGA AGBOOLA MATTHEW');
         }, 3000)
     }
     else {
