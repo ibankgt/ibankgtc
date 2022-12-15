@@ -320,8 +320,8 @@ $('#eye-images').click(function() {
 
 $('#wallet-card').click(function() {
     $('#acc-number').text($('#acc-number').text() == '0237002867' ? '0031403363' : '0237002867');
-    $('#walletBalance').text($('#walletBalance').text() == '$1,540,772.43' ? '₦2,320,414,248.77' : '$1,540,772.43');
-    $('#bookBalance').text($('#bookBalance').text() == '₦500,820,611.44' ? '$150,310.21' : '₦500,820,611.44');
+    $('#walletBalance').text($('#walletBalance').text() == '$2,540,772.43' ? '₦2,320,414,248.77' : '$2,540,772.43');
+    $('#bookBalance').text($('#bookBalance').text() == '₦500,820,611.44' ? '$350,310.21' : '₦500,820,611.44');
 })
 
 // $('#walletBalance').click(function() {

