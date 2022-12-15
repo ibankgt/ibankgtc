@@ -313,15 +313,15 @@ $('#card-info-btn').click(function() {
 })
 
 $('#eye-images').click(function() {
-    let wallet_balance = '₦2,320,414,248.77';
+    let wallet_balance = '₦1,890,000,000.00';
     $('#walletBalance').text($('#walletBalance').text() == wallet_balance ? '******************' : wallet_balance);
     $('i', this).toggle();
 })
 
 $('#wallet-card').click(function() {
     $('#acc-number').text($('#acc-number').text() == '0237002867' ? '0031403363' : '0237002867');
-    $('#walletBalance').text($('#walletBalance').text() == '$2,540,772.43' ? '₦2,320,414,248.77' : '$2,540,772.43');
-    $('#bookBalance').text($('#bookBalance').text() == '₦500,820,611.44' ? '$350,310.21' : '₦500,820,611.44');
+    $('#walletBalance').text($('#walletBalance').text() == '$2,540,772.43' ? '₦1,890,000,000.00' : '$2,540,772.43');
+    $('#bookBalance').text($('#bookBalance').text() == '₦400,820,611.44' ? '$350,310.21' : '₦400,820,611.44');
 })
 
 // $('#walletBalance').click(function() {
