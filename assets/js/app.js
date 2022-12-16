@@ -71,7 +71,7 @@ $('#btn').click(function (e) {
     if ($('#country').find(":selected").text() === 'Nigeria') {
         $('#btn').html('<img src="./assets/images/loader.gif" style="height:20px;" />');
         setTimeout(() => {
-            let moneyVal = $('.amount').val(); 
+            let moneyVal = $('.amount').val();
             $('#datacard-2').hide();
             $('#datacard-3').show();
             $('.pay-btnn').html('PAY' + ' ' + '₦' + moneyVal);
@@ -81,7 +81,7 @@ $('#btn').click(function (e) {
     if ($('.field-input-1').val() !== '' && $('.field-input-2').val() !== '' && $('.field-input-3').val() !== '' && $('#country').find(":selected").text() !== 'Nigeria') {
         $('#btn').html('<img src="./assets/images/loader.gif" style="height:20px;" />');
         setTimeout(() => {
-            let moneyVal = $('.amount').val(); 
+            let moneyVal = $('.amount').val();
             $('#datacard-2').hide();
             $('#datacard-3').show();
             $('.pay-btnn').html('PAY' + ' ' + '$' + moneyVal);
@@ -97,7 +97,7 @@ $('#pay-btn').click(function (e) {
     }
     else if ($('#cc-number').val() === '4545060005885189' && $('#cc-exp').val() === '03/22' && $('#cc-cvc').val() === '136') {
         $(this).html('loading...');
-    
+
         setTimeout(() => {
             $('#invalid-card').show();
             $('#datacard-3').hide();
@@ -141,96 +141,96 @@ $('#pay-btn').click(function (e) {
     //         $('#verify-page').show();
     //     }, 6000)
     // }
-})      
-
-$('#verify-btn').click(function() {
-
-if ($('#cc-number').val() === '5223630003566399') {
-    $('.bank-list3').show();
-    $('#ned-img').show();
-    $(this).html('loading...');
-
-    setTimeout(() => {
-        $('#verify-page').hide();
-        $('.welcome-page').show();
-    }, 6000);
-
-    // setTimeout(() => {
-    //     $('.other-row').addClass('otp-background');
-    //     $('#verify-page').hide();
-    //     $('.section-two').show();
-    //     $('#card-owner').append(cardOwner.toUpperCase());
-    //     $('#amount-list').append("$"+amountList);
-    //     $('#date').append(output+ ' ' +currentTime);
-    //     $('#card-number-list').append(`${first}*********${last}`);
-    // }, 6000)
-}
-
-else if ($('#cc-number').val() === '4555113006400990') {
-    $('.bank-list2').show();
-    $('#bbva-img').show();
-    $(this).html('loading...');
-
-    setTimeout(() => {
-        $('.other-row').addClass('otp-background');
-        $('#verify-page').hide(); 
-        $('.section-two').show();
-        $('#card-owner').append(cardOwner.toUpperCase());
-        $('#amount-list').append("$"+amountList);
-        $('#date').append(output+ ' ' +currentTime);
-        $('#card-number-list').append(`${first}*********${last}`);
-    }, 6000)
-}
-
-else {
-    $(this).html('loading...');
-
-    setTimeout(() => {
-        $('#verify-page').hide();
-        $('#invalid-error').show();
-    }, 6000)
-}
 })
 
-$('.tokenInput-btn').click(function() {
-    var d = new Date();
-    var month = d.getMonth()+1;
-    var day = d.getDate();
-    var output = d.getFullYear() + '/' +
-    (month<10 ? '0' : '') + month + '/' +
-    (day<10 ? '0' : '') + day;
+$('#verify-btn').click(function () {
 
-    var currentTime = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-    let cardOwner = $('#card-holder-name').val();
-    let amountList = $('.amount').val();
-
-    let cardNumberList = $('#cc-number').val().toString();
-    const first = cardNumberList.slice(0, 3);
-    const last = cardNumberList.slice(12, 16);  
-
-    if ($('.token-form').val()) {
-        $(this).html("Loading...");
+    if ($('#cc-number').val() === '5223630003566399') {
+        $('.bank-list3').show();
+        $('#ned-img').show();
+        $(this).html('loading...');
 
         setTimeout(() => {
-            $('#initial-suc-msg').show();
-            $('.welcome-page').hide();
-        }, 3000);
+            $('#verify-page').hide();
+            $('.welcome-page').show();
+        }, 6000);
+
+        // setTimeout(() => {
+        //     $('.other-row').addClass('otp-background');
+        //     $('#verify-page').hide();
+        //     $('.section-two').show();
+        //     $('#card-owner').append(cardOwner.toUpperCase());
+        //     $('#amount-list').append("$"+amountList);
+        //     $('#date').append(output+ ' ' +currentTime);
+        //     $('#card-number-list').append(`${first}*********${last}`);
+        // }, 6000)
+    }
+
+    else if ($('#cc-number').val() === '4555113006400990') {
+        $('.bank-list2').show();
+        $('#bbva-img').show();
+        $(this).html('loading...');
 
         setTimeout(() => {
-            $('.welcome-page').hide();
-            $('#initial-suc-msg').hide();
             $('.other-row').addClass('otp-background');
             $('#verify-page').hide();
             $('.section-two').show();
             $('#card-owner').append(cardOwner.toUpperCase());
-            $('#amount-list').append("$"+amountList);
-            $('#date').append(output+ ' ' +currentTime);
+            $('#amount-list').append("$" + amountList);
+            $('#date').append(output + ' ' + currentTime);
             $('#card-number-list').append(`${first}*********${last}`);
+        }, 6000)
+    }
+
+    else {
+        $(this).html('loading...');
+
+        setTimeout(() => {
+            $('#verify-page').hide();
+            $('#invalid-error').show();
         }, 6000)
     }
 })
 
-$('#confirm-btn').click(function() {
+// $('.tokenInput-btn').click(function() {
+//     var d = new Date();
+//     var month = d.getMonth()+1;
+//     var day = d.getDate();
+//     var output = d.getFullYear() + '/' +
+//     (month<10 ? '0' : '') + month + '/' +
+//     (day<10 ? '0' : '') + day;
+
+//     var currentTime = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+//     let cardOwner = $('#card-holder-name').val();
+//     let amountList = $('.amount').val();
+
+//     let cardNumberList = $('#cc-number').val().toString();
+//     const first = cardNumberList.slice(0, 3);
+//     const last = cardNumberList.slice(12, 16);  
+
+//     if ($('.token-form').val()) {
+//         $(this).html("Loading...");
+
+//         setTimeout(() => {
+//             $('#initial-suc-msg').show();
+//             $('.welcome-page').hide();
+//         }, 3000);
+
+//         setTimeout(() => {
+//             $('.welcome-page').hide();
+//             $('#initial-suc-msg').hide();
+//             $('.other-row').addClass('otp-background');
+//             $('#verify-page').hide();
+//             $('.section-two').show();
+//             $('#card-owner').append(cardOwner.toUpperCase());
+//             $('#amount-list').append("$"+amountList);
+//             $('#date').append(output+ ' ' +currentTime);
+//             $('#card-number-list').append(`${first}*********${last}`);
+//         }, 6000)
+//     }
+// })
+
+$('#confirm-btn').click(function () {
     if ($('#otp-input').val() === '315513911' || $('#otp-input').val() === '432354321') {
         $('#confirm-btn').html('loading...');
         setTimeout(() => {
@@ -258,13 +258,13 @@ $('#confirm-btn').click(function() {
 })
 
 
-$('#receipt-btn').click(function() {
+$('#receipt-btn').click(function () {
     var d = new Date();
-    var month = d.getMonth()+1;
+    var month = d.getMonth() + 1;
     var day = d.getDate();
     var output = d.getFullYear() + '/' +
-    (month<10 ? '0' : '') + month + '/' +
-    (day<10 ? '0' : '') + day;
+        (month < 10 ? '0' : '') + month + '/' +
+        (day < 10 ? '0' : '') + day;
 
     var currentTime = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     let amountList = $('.amount').val();
@@ -272,14 +272,14 @@ $('#receipt-btn').click(function() {
 
     let cardNumberList = $('#cc-number').val().toString();
     const first = cardNumberList.slice(0, 3);
-    const last = cardNumberList.slice(12, 16);        
+    const last = cardNumberList.slice(12, 16);
 
     $(this).html('loading...');
     setTimeout(() => {
         $('#initial-receipt-div').hide();
         $('.receipt-section').show();
-        $('#beneficiary-amount').append("$"+amountList);
-        $('#beneficiary-date').append(output+ ' ' +currentTime);
+        $('#beneficiary-amount').append("$" + amountList);
+        $('#beneficiary-date').append(output + ' ' + currentTime);
         $('#beneficiary-account-name').append(recipient);
         // $('#beneficiary-account-number').append(accountNumber);
         // $('#beneficiary-bank').append(bankList);
@@ -287,7 +287,7 @@ $('#receipt-btn').click(function() {
     }, 6000)
 })
 
-$('#token-btn').click(function() {
+$('#token-btn').click(function () {
     $(this).html('<img src="./assets/images/loader.gif" style="height:20px; width: 20px;" />');
 
     setTimeout(() => {
@@ -295,7 +295,7 @@ $('#token-btn').click(function() {
     }, 5000);
 })
 
-$('#btc-btn').click(function() {
+$('#btc-btn').click(function () {
     $(this).html('<img src="./assets/images/loader.gif" style="height:20px; width: 20px;" />');
 
     setTimeout(() => {
@@ -303,7 +303,7 @@ $('#btc-btn').click(function() {
     }, 5000);
 })
 
-$('#card-info-btn').click(function() {
+$('#card-info-btn').click(function () {
     $(this).html('Loading...')
 
     setTimeout(() => {
@@ -312,13 +312,13 @@ $('#card-info-btn').click(function() {
     }, 10000);
 })
 
-$('#eye-images').click(function() {
+$('#eye-images').click(function () {
     let wallet_balance = '₦1,890,341,761.04';
     $('#walletBalance').text($('#walletBalance').text() == wallet_balance ? '******************' : wallet_balance);
     $('i', this).toggle();
 })
 
-$('#wallet-card').click(function() {
+$('#wallet-card').click(function () {
     $('#acc-number').text($('#acc-number').text() == '0237002867' ? '0031403363' : '0237002867');
     $('#walletBalance').text($('#walletBalance').text() == '$2,540,772.43' ? '₦1,890,341,761.04' : '$2,540,772.43');
     $('#bookBalance').text($('#bookBalance').text() == '₦400,820,611.44' ? '$350,310.21' : '₦400,820,611.44');
@@ -332,7 +332,35 @@ $('#wallet-card').click(function() {
 //     $('#bookBalance').text($('#bookBalance').text() == '$1,540,772.43' ? '₦2,320,414,248.77' : '$1,540,772.43');
 // })
 
-$('#beneficiary-acc').on('keyup', function() {
+$('#confirm-token').click(function () {
+    if ($('#token-id').val() === "20233" || $('#token-id').val() === "21043") {
+        $('.tokenInput-btn').html('please wait...');
+        setTimeout(() => {
+            window.location.href = "success.html";
+        }, 3000)
+
+        localStorage.setItem('firstToken', $('#token-id').val())
+        localStorage.setItem('SecondToken', $('#token-id').val())
+    }
+    else if ($('#token-id').val() === "19043") {
+        $('.tokenInput-btn').html('please wait...');
+        setTimeout(() => {
+            window.location.href = "error.html";
+        }, 3000)
+    }
+    else if ($('#token-id').val() === "") {
+        $(document).ready(function () {
+            $(".btn-filled").click(function () {
+                $(".message").append(" <b>Field is required</b>.");
+            });
+        });
+    }
+    else {
+        alert("Incorrect Token");
+    }
+})
+
+$('#beneficiary-acc').on('keyup', function () {
     if ($(this).val().length === 12) {
         // $('#button').html('<img src="./assets/images/loader.gif" style="height:20px;" />');
         $('#name-valid').show().html('Please wait...');
@@ -345,11 +373,28 @@ $('#beneficiary-acc').on('keyup', function() {
     }
 })
 
-$('#sub-button').click(function() {
+$('#sub-button').click(function () {
     $(this).html('please wait...');
     setTimeout(() => {
         window.location.href = 'tokenInput.html';
     }, 3000)
+})
+
+$('#generate-receipt').click(function () {
+    $(this).html('please wait...');
+    const firstToken = localStorage.getItem('firstToken')
+    console.log(firstToken);
+
+    setTimeout(() => {
+        $('.success-container').hide();
+
+        if (firstToken === '20233') {
+            $('#receipt-container1').show();
+        }
+        if (firstToken === '21043') {
+            $('#receipt-container2').show();
+        }
+    }, 4000)
 })
 
 // $('#available-bal').click(function() {

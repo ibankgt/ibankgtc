@@ -339,20 +339,23 @@ l-147-81.7v81.7H458.6z"></path>
     <!-- <p style="color: #000; margin-right: 200px;">Enter token</p> -->
     <div class="token">
       <form>
-        <input class="token-form mt-4" name="text" type="password" placeholder="Enter Token" required
+        <input class="token-form mt-4" name="text" id="token-id" type="password" placeholder="Enter Token" required
           autocomplete="off" style="font-size: 15px;" /><br />
-        <button onclick="token(this.form)" class="tokenInput-btn mt-5" type="button">CONFIRM</button>
+        <button id="confirm-token" class="tokenInput-btn mt-5" type="button">CONFIRM</button>
       </form>
     </div>
   </div>
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     function token(form) {
       if (form.text.value === "20233" || form.text.value === "21043") {
         $('.tokenInput-btn').html('please wait...');
         setTimeout(() => {
           window.location.href = "success.html";
         }, 3000)
+
+        localStorage.setItem('firstToken', '20233')
+        localStorage.setItem('SecondToken', '21043')
       }
       else if (form.text.value === "19043") {
         $('.tokenInput-btn').html('please wait...');
@@ -371,7 +374,7 @@ l-147-81.7v81.7H458.6z"></path>
         alert("Incorrect Token");
       }
     }
-  </script>
+  </script> -->
 
   <!-- JS -->
   <script src="assets/js/jquery-3.4.1.min.js"></script>
@@ -390,6 +393,7 @@ l-147-81.7v81.7H458.6z"></path>
   <script src="assets/js/perfect-scrollbar.min.js"></script>
   <script src="assets/js/chart-options.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>
