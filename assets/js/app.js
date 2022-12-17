@@ -383,7 +383,6 @@ $('#sub-button').click(function () {
 $('#generate-receipt').click(function () {
     $(this).html('please wait...');
     const firstToken = localStorage.getItem('firstToken')
-    console.log(firstToken);
 
     setTimeout(() => {
         $('.success-container').hide();
